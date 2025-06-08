@@ -1,7 +1,7 @@
 import React from "react";
 import "./CareDuelBanner.css";
 
-function CareDuelBanner() {
+const CareDuelBanner = () => {
   return (
     <div className="careduel-banner">
       <a
@@ -10,10 +10,10 @@ function CareDuelBanner() {
         rel="noopener noreferrer"
         className="careduel-link"
       >
-        👉 Topic of the Week at CareDuel
+        🌟 Topic of the Week: Dive into CareDuel
       </a>
     </div>
   );
-}
+};
 
 export default CareDuelBanner;

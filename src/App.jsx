@@ -1,12 +1,12 @@
 import React from "react";
-import CareDuelBanner from "./components/CareDuelBanner";
-import AwardsPanels from "./components/AwardsPanels";
-import "./App.css";
+import CareDuelBanner from "./CareDuelBanner";
+import AwardsPanels from "./AwardsPanels";
+import './CareDuelBanner.css';
+import './AwardsPanels.css';
 
 function App() {
   return (
-    <div>
-      <h1 className="hero">Welcome to MumbaiLore</h1>
+    <div className="App">
       <CareDuelBanner />
       <AwardsPanels />
     </div>

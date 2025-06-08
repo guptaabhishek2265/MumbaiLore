@@ -1,25 +1,29 @@
-.awards-container {
+.awards-panel-container {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
   gap: 20px;
-  padding: 24px;
+  justify-content: center;
+  margin: 20px;
 }
 
 .award-card {
-  background-color: #ffffff;
+  background-color: white;
   border: 1px solid #424242;
   border-radius: 8px;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
-  padding: 20px 24px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  width: 280px;
+  text-align: center;
   text-decoration: none;
-  color: #424242;
-  font-family: 'Playfair Display', serif;
-  font-size: 20px;
-  transition: border 0.3s ease;
-  min-width: 280px;
+  transition: border-color 0.3s ease;
 }
 
 .award-card:hover {
-  border-color: #e91e63;
+  border-color: #E91E63;
+}
+
+.award-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 20px;
+  color: #424242;
 }

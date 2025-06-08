@@ -1,28 +1,33 @@
 import React from "react";
 import "./AwardsPanels.css";
 
-function AwardsPanels() {
-  return (
-    <div className="awards-container">
-      <a
-        href="https://top216.com/vote"
-        className="award-card"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        🗳 Vote Top216
-      </a>
+const panels = [
+  {
+    title: "🏆 Vote Top216",
+    link: "https://top216.com/vote",
+  },
+  {
+    title: "🔍 Explore TheTop36",
+    link: "https://thetop36.com/highlights",
+  },
+];
 
-      <a
-        href="https://thetop36.com/highlights"
-        className="award-card"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        🌟 Explore TheTop36
-      </a>
+const AwardsPanels = () => {
+  return (
+    <div className="awards-panel-container">
+      {panels.map((panel, index) => (
+        <a
+          key={index}
+          href={panel.link}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="award-card"
+        >
+          <h3 className="award-title">{panel.title}</h3>
+        </a>
+      ))}
     </div>
   );
-}
+};
 
 export default AwardsPanels;

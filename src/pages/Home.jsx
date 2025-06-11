@@ -1,6 +1,9 @@
 import React from 'react'
 import CareDuelBanner from '../components/CareDuelBanner'
 import AwardsPanels from '../components/AwardsPanels'
+import CulturalInsights from '../components/CulturalInsights'
+import ContentSections from '../components/ContentSections'
+import Hero from './Hero'
 
 const Home = () => {
   return (
@@ -9,8 +12,11 @@ const Home = () => {
       <p className="mb-4">
         Discover hidden histories, street tales, and local legends of Mumbai. Dive into a world of cultural expression, poetry, and untold stories.
       </p>
+      <Hero/>
       <CareDuelBanner />
       <AwardsPanels />
+      <ContentSections/>
+      <CulturalInsights />
     </>
   )
 }

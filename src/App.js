@@ -6,6 +6,7 @@ import AwardsPanels from './components/AwardsPanels'
 import CareDuelBanner from './components/CareDuelBanner'
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'
 import SubmitPage from './pages/SubmitFormPage'
+import StoryGridPage from './pages/StoryGridPage'
 
 const App = () => {
   return (
@@ -27,7 +28,7 @@ const App = () => {
               </>
             }
           />
-          <Route path="/stories" />
+          <Route path="/stories" element={<StoryGridPage/>}/>
           <Route path="/submit" element={<SubmitPage/>}/>
         </Routes>
       </main>

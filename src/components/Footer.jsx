@@ -1,20 +1,34 @@
-import React from 'react'
-import { Link } from 'react-router-dom'
-import Newsletter from './Newsletter'
+import React, { useEffect } from 'react';
+import { Link } from 'react-router-dom';
+import Newsletter from './Newsletter';
 
 const Footer = () => {
+    useEffect(() => {
+        const script = document.createElement('script');
+        script.src = "https://cdn.alatreeventures.com/raffle-widget.js";
+        script.onload = () => {
+            if (window.RaffleWidget) {
+                window.RaffleWidget.init({
+                    apiBase: "https://api.alatreeventures.com",
+                    userId: "mumbai-user", 
+                });
+            }
+        };
+        document.body.appendChild(script);
+    }, []);
+
     return (
         <footer className="bg-gray-100 text-gray-900 mt-12">
             <div className="max-w-7xl mx-auto px-4 py-20 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8">
-                {/* About */}
                 <div>
-                    <h3 className="font-semibold mb-2">About <a href="/" className="text-xl font-extrabold tracking-wide text-[#E91E63]">
-                        Mumbai<span className="text-gray-800">Lore</span>
-                    </a></h3>
+                    <h3 className="font-semibold mb-2">
+                        About <a href="/" className="text-xl font-extrabold tracking-wide text-[#E91E63]">
+                            Mumbai<span className="text-gray-800">Lore</span>
+                        </a>
+                    </h3>
                     <p>Your daily dose of city stories and culture. Discover hidden gems and local legends.</p>
                 </div>
 
-                {/* Quick Links */}
                 <div>
                     <h3 className="font-semibold mb-2">Quick Links</h3>
                     <ul className="space-y-1">
@@ -25,7 +39,6 @@ const Footer = () => {
                     </ul>
                 </div>
 
-                {/* Resources */}
                 <div>
                     <h3 className="font-semibold mb-2">Resources</h3>
                     <ul className="space-y-1">
@@ -35,14 +48,14 @@ const Footer = () => {
                     </ul>
                 </div>
 
-                {/* Newsletter Placeholder */}
                 <div>
                     <h3 className="font-semibold mb-2">Newsletter Signup</h3>
-                    <Newsletter/>
+                    <Newsletter />
+                    <div id="raffle-widget" className="mt-4" />
                 </div>
             </div>
         </footer>
-    )
-}
+    );
+};
 
-export default Footer
+export default Footer;
